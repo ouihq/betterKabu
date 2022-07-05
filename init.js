@@ -64,7 +64,7 @@ function startInfiniteLoop() {
 
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
-        console.log("Darkikabu active");
+        console.log("[Darkikabu active]");
         const urlpath = window.location.pathname;
         if (urlpath.includes("Stundenplan") || urlpath.includes("Main")) {
             setTimeout(() => {
