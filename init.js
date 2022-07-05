@@ -1,5 +1,4 @@
 
-
 if ((document.referrer == "https://www.digikabu.de") || (document.referrer == "https://www.digikabu.de/Main/TestRedirect")) {
     window.location.href = "https://www.digikabu.de/Stundenplan/Klasse";
 }
@@ -57,8 +56,15 @@ const hourNow = "green";
 const hourNext = "orange";
 
 document.onreadystatechange = () => {
-    console.log("Darkikabu active");
-    timeTable.forEach(checkTime);
+    if (document.readyState === "complete") {
+        console.log("Darkikabu active");
+        const urlpath = window.location.pathname;
+        if (urlpath.includes("Stundenplan") || urlpath.includes("Main")) {
+            setTimeout(() => {
+                timeTable.forEach(checkTime);
+            }, 500);
+        }
+    }
 }
 
 
@@ -75,12 +81,23 @@ function checkTime(item, index) {
     const startTime = getTimeObject(item.start[0], item.start[1]);
     const endTime = getTimeObject(item.end[0], item.end[1]);
 
-    if ((currentTime > startTime) && (currentTime < endTime)) {
-        document.querySelector("#umgebung > div.hidden-xs > div > svg:nth-child(1) > g:nth-child("+(index+1)+") > text:nth-child(2)").style.fill = hourNow;
-        document.querySelector("#umgebung > div.hidden-xs > div > svg:nth-child(1) > g:nth-child("+(index+1)+") > text:nth-child(3").style.fill = hourNow;
-        document.querySelector("#umgebung > div.hidden-xs > div > svg:nth-child(1) > g:nth-child("+(index+1)+") > text:nth-child(4)").style.fill = hourNow;
+    let box;
 
+    if (window.location.pathname.includes("Stundenplan")) {
+        box = document.getElementById('umgebung').children[0];
+    } else {
+        box = document.getElementById('umgebung').children[0].children[1].children[0];
     }
 
-    //console.log(item.start, index);
+    const currentBox = box.children[index];
+
+    if (currentTime > endTime) {
+        currentBox.children[1].style.fill = hourOver;
+        currentBox.children[2].style.fill = hourOver;
+        currentBox.children[3].style.fill = hourOver;
+    } else if ((currentTime > startTime) && (currentTime < endTime)) {
+        currentBox.children[1].style.fill = hourNow;
+        currentBox.children[2].style.fill = hourNow;
+        currentBox.children[3].style.fill = hourNow;
+    }
 }
