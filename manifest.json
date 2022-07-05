@@ -4,32 +4,27 @@
     "version": "0.1.0",
     "manifest_version": 3,
     "icons": {
-        "16": "/images/icon-16x16.png",
-        "32": "/images/icon-32x32.png",
-        "48": "/images/icon-48x48.png",
-        "128": "/images/icon-128x128.png"
-    },
-    "background": {
-        "service_worker": "background.js"
+        "16": "/media/icon16.png",
+        "32": "/media/icon32.png",
+        "48": "/media/icon48.png",
+        "128": "/media/icon128.png"
     },
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "/images/icon-16x16.png",
-            "32": "/images/icon-32x32.png",
-            "48": "/images/icon-48x48.png",
-            "128": "/images/icon-128x128.png"
+            "16": "/media/icon16.png",
+            "32": "/media/icon32.png",
+            "48": "/media/icon48.png",
+            "128": "/media/icon128.png"
         }
     },
     "options_page": "options.html",
     "permissions": [
-        "scripting"
+        "activeTab"
     ],
-    "host_permissions": [
-        "https://www.digikabu.de/*",
-        "https://digikabu.de/*",
-        "http://www.digikabu.de/*",
-        "http://digikabu.de/*"
-
-    ]
+    "content_scripts": [{
+        "matches": ["https://*.digikabu.de/*", "http://*.digikabu.de/*", "https://digikabu.de/*", "http://digikabu.de/*"],
+        "js": ["init.js"],
+        "css": ["init.css"]
+    }]
 }
