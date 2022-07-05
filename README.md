@@ -1,2 +1,5 @@
 # Darkikabu Extension
-![alt text](https://github.com/davbauer/darkikabu-extension/blob/main/screenshots/front_page.png)
+
+## Overview
+![Login Page](https://github.com/davbauer/darkikabu-extension/blob/main/screenshots/front_page.png)
+![Schedule Page](https://github.com/davbauer/darkikabu-extension/blob/main/screenshots/schedule.png)
