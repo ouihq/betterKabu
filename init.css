@@ -1,0 +1,146 @@
+
+:root {
+    --dark1: #131313 !important;
+    --brighter: #232323 !important; 
+    --hourOverlay: #1f3058 !important;
+    --white: rgb(221, 221, 221) !important;
+  }
+
+
+body {
+    background-color: rgb(8, 8, 8) !important;
+	padding-top: 0px !important;
+}
+
+.center-block span {
+    background-color: var(--brighter) !important;
+}
+
+table tbody tr td span {
+    color: var(--white) !important;
+    margin-left: 10px;
+}
+
+.navbar-inverse {
+    background-image: none !important;
+    background-color: var(--hourOverlay) !important;
+}
+
+ a:focus, a:hover, a:active {
+    background-color: rgb(2, 38, 75) !important;
+    transition-duration: 0.2s !important;
+}
+
+
+.center-block .glyphicon {
+    background-color: transparent !important;
+}
+
+.navbar-brand {
+    background-color: transparent !important;
+}
+
+.feiertag {
+    background-color: #213d2d !important;
+}
+
+.keinunterr {
+    background-color: #213d2d !important;
+}
+
+
+
+.form-control {
+    color: var(--white) !important;
+    background-color: var(--brighter) !important ;
+    border: solid 2px var(--brighter) !important;
+}
+
+.std, .reg {
+    fill: var(--dark1) !important;
+}
+
+td {
+    color: var(--white) !important;
+}
+
+svg {
+    background-color: var(--brighter) !important;
+    border-radius: 2.5px !important;
+}
+
+hr {
+    border-color: var(--brighter) !important;
+}
+
+.regStd {
+    fill: var(--hourOverlay) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--brighter) !important;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-color: transparent !important; 
+}
+
+rect.vertretStd {
+    fill: rgb(134, 93, 134) !important;
+}
+
+.inhalt {
+    fill: var(--white) !important;
+}
+
+rect.entfStd  {
+    fill: rgb(114, 17, 17) !important;
+}
+
+.btn-default {
+    background-image: none !important;
+    background-color: var(--dark1) !important;
+    border: 1px solid var(--brighter) !important;
+}
+
+.glyphicon-forward:before,
+.glyphicon-backward:before {
+    color: #317eac !important;
+}
+
+div.form-group label {
+    color: var(--white) !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+ .navbar-inverse .navbar-nav > .active > a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #02264b !important;
+}
+
+a.navbar-brand:hover,
+a.navbar-brand:active,
+a.navbar-brand:focus {
+    background-color: #1f3058 !important;
+}
+
+div.center-block span {
+    border-radius: 3px !important;
+}
+
+table.table.table-striped { border-collapse: separate; }
+td {
+     border: solid 1px rgb(0, 0, 0); 
+}
+tr:first-child td:first-child { border-top-left-radius: 4px !important; }
+tr:first-child td:last-child { border-top-right-radius: 4px !important; }
+tr:last-child td:first-child { border-bottom-left-radius: 4px !important; }
+tr:last-child td:last-child { border-bottom-right-radius: 4px !important; }
+
+div.container.body-content table tbody tr td {
+    border: none !important;
+}
+
+svg g text{
+    transition-duration: 0.4s !important;
+}

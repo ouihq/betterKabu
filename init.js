@@ -6,3 +6,4 @@ if ((document.referrer == "https://www.digikabu.de") || (document.referrer == "h
 if ((document.referrer == "https://digikabu.de") || (document.referrer == "https://digikabu.de/Main/TestRedirect")) {
     window.location.href = "https://digikabu.de/Stundenplan/Klasse";
 }
+
