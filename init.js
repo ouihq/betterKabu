@@ -55,6 +55,13 @@ const hourOver = "grey";
 const hourNow = "green";
 const hourNext = "orange";
 
+function startInfiniteLoop() {
+    setTimeout(function() {
+        timeTable.forEach(checkTime);
+    }, 10000)
+}
+  
+
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
         console.log("Darkikabu active");
@@ -62,6 +69,7 @@ document.onreadystatechange = () => {
         if (urlpath.includes("Stundenplan") || urlpath.includes("Main")) {
             setTimeout(() => {
                 timeTable.forEach(checkTime);
+                startInfiniteLoop();
             }, 500);
         }
     }
