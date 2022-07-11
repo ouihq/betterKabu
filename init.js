@@ -59,7 +59,7 @@ function startInfiniteLoop() {
     setTimeout(function() {
         timeTable.forEach(checkTime);
         startInfiniteLoop();
-    }, 1000)
+    }, 10000)
 }
   
 
