@@ -4,7 +4,7 @@
     --brighter: #232323 !important; 
     --hourOverlay: #1f3058 !important;
     --white: rgb(221, 221, 221) !important;
-  }
+}
 
 
 body {
@@ -81,7 +81,12 @@ hr {
     background-color: var(--brighter) !important;
 }
 
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
     border-color: transparent !important; 
 }
 
@@ -113,8 +118,8 @@ div.form-group label {
 }
 
 .navbar-inverse .navbar-nav > .active > a,
- .navbar-inverse .navbar-nav > .active > a:hover,
-  .navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
     background-color: #02264b !important;
 }
 
@@ -132,6 +137,7 @@ table.table.table-striped { border-collapse: separate; }
 td {
      border: solid 1px rgb(0, 0, 0); 
 }
+
 tr:first-child td:first-child { border-top-left-radius: 4px !important; }
 tr:first-child td:last-child { border-top-right-radius: 4px !important; }
 tr:last-child td:first-child { border-bottom-left-radius: 4px !important; }
