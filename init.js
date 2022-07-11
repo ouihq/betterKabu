@@ -58,7 +58,8 @@ const hourNext = "orange";
 function startInfiniteLoop() {
     setTimeout(function() {
         timeTable.forEach(checkTime);
-    }, 10000)
+        startInfiniteLoop();
+    }, 1000)
 }
   
 
