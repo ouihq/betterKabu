@@ -1,4 +1,6 @@
 
+
+// Redirect to week schedule instead of appointments
 if ((document.referrer == "https://www.digikabu.de") || (document.referrer == "https://www.digikabu.de/Main/TestRedirect")) {
     window.location.href = "https://www.digikabu.de/Stundenplan/Klasse";
 }
@@ -7,6 +9,7 @@ if ((document.referrer == "https://digikabu.de") || (document.referrer == "https
     window.location.href = "https://digikabu.de/Stundenplan/Klasse";
 }
 
+// Define available hours
 timeTable = [
     {
         start: [8, 30],
@@ -50,33 +53,36 @@ timeTable = [
     },
 ];
 
-const refreshTimeout = 3500;
+// Define Paramters of extension
+const refreshTimeout = 10000;
 const hourOver = "grey";
 const hourNow = "green";
 const hourNext = "orange";
 
+// function which loops infinitly
 function startInfiniteLoop() {
     setTimeout(function() {
         timeTable.forEach(checkTime);
         startInfiniteLoop();
-    }, 10000)
+    }, refreshTimeout)
 }
   
-
+// Init if Webpage has loaded
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
         console.log("[Darkikabu active]");
         const urlpath = window.location.pathname;
+        // Only add colored hours if urlpath matches specific requirements
         if (urlpath.includes("Stundenplan") || urlpath.includes("Main")) {
             setTimeout(() => {
                 timeTable.forEach(checkTime);
                 startInfiniteLoop();
-            }, 500);
+            }, 500); // Still add a 500ms delay since website still rendering
         }
     }
 }
 
-
+// function to convert time from time_table to date objects
 function getTimeObject(hours, minutes) {
     let obj = new Date();
     obj.setHours(hours);
@@ -85,6 +91,7 @@ function getTimeObject(hours, minutes) {
     return obj
 }
 
+// function to check if specific time window is met
 function checkTime(item, index) {
     currentTime = new Date();
     const startTime = getTimeObject(item.start[0], item.start[1]);
