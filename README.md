@@ -1,5 +1,5 @@
 # Darkikabu Extension
-## Installing
+## Installation
 
 1. Ordner herunterladen, entpacken und z. B. im Ordner Dokumente speichern
 2. Extension Tab in einem chromium basierten Browser öffnen
