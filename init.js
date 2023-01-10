@@ -57,7 +57,6 @@ timeTable = [
 const refreshTimeout = 10000;
 const hourOver = "grey";
 const hourNow = "green";
-const hourNext = "orange";
 
 // function which loops infinitly
 function startInfiniteLoop() {
@@ -73,11 +72,15 @@ document.onreadystatechange = () => {
         console.log("[Darkikabu active]");
         const urlpath = window.location.pathname;
         // Only add colored hours if urlpath matches specific requirements
+        if (urlpath.includes("SchulaufgabenPlan")) {
+            markCurrentDay();
+        }
         if (urlpath.includes("Stundenplan") || urlpath.includes("Main")) {
+            
             setTimeout(() => {
                 timeTable.forEach(checkTime);
                 startInfiniteLoop();
-            }, 500); // Still add a 500ms delay since website still rendering
+            }, 600); // Still add a 600ms delay since website still rendering
         }
     }
 }
@@ -115,5 +118,24 @@ function checkTime(item, index) {
         currentBox.children[1].style.fill = hourNow;
         currentBox.children[2].style.fill = hourNow;
         currentBox.children[3].style.fill = hourNow;
+    }
+}
+
+function markCurrentDay() {
+    var today = new Date(),
+    day = String(today.getDate()).padStart(2, "0"),
+    month = String(today.getMonth() + 1).padStart(2, "0"),
+    date = day + "." + month + ".";
+
+    var tables = document.getElementsByTagName("table");
+    for (var i = 0; i < tables.length; i++) {
+        var strongs = tables[i].getElementsByTagName("strong");
+        for (var j = 0, len = strongs.length; j < len; j++) {
+            var strong = strongs[j];
+            if (strong.textContent.includes(date)) {
+                strong.closest("tr").style.backgroundColor = "#876996";
+                return;
+            }
+        }
     }
 }
