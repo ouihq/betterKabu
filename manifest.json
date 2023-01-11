@@ -1,7 +1,7 @@
 {
     "name": "Darkikabu",
     "description": "Changes the Digikabu page to dark theme and adds time markers for current hour",
-    "version": "0.1.3",
+    "version": "0.1.2",
     "manifest_version": 3,
     "icons": {
         "16": "/media/icon16.png",
@@ -18,6 +18,9 @@
             "128": "/media/icon128.png"
         }
     },
+    "permissions": [
+        "activeTab"
+    ],
     "content_scripts": [{
         "matches": ["https://*.digikabu.de/*", "http://*.digikabu.de/*", "https://digikabu.de/*", "http://digikabu.de/*"],
         "js": ["init.js"],
