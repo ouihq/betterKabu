@@ -18,9 +18,6 @@
             "128": "/media/icon128.png"
         }
     },
-    "permissions": [
-        "activeTab"
-    ],
     "content_scripts": [{
         "matches": ["https://*.digikabu.de/*", "http://*.digikabu.de/*", "https://digikabu.de/*", "http://digikabu.de/*"],
         "js": ["init.js"],
