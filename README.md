@@ -1,5 +1,10 @@
 # Darkikabu Extension
-## Installation
+
+## Chrome Webstore Installation
+
+Chrome Webstore: https://chrome.google.com/webstore/detail/darkikabu/dlfmmhiopedplookhebmjmebfioeofdf
+
+## Manuelle Installation
 
 1. Ordner herunterladen, entpacken und z. B. im Ordner Dokumente speichern
 2. Extension Tab in einem chromium basierten Browser öffnen
