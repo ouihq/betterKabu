@@ -9,7 +9,7 @@ Key Features
 
 Installing
 ----------
-1. Downloade the repository
+1. Download the source from the top right corner or the releases tab.
 2. Open your web browser and click on the three dots in the top right corner to open the browser's menu. From there, select "More tools" and then "Extensions" (or "Add-ons" in some browsers).
 3. In the Extensions page, make sure that the "Developer mode" toggle switch is turned on. This will enable you to install extensions that are not available in the browser's official extension marketplace.
 4. Next, click on the "Load unpacked" button. This will open a file explorer window.
