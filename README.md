@@ -10,4 +10,4 @@
 7. Finally, check that the extension is installed and working correctly by looking for its icon in your browser's toolbar or by testing its functionality.
 
 ## Visual Example
-![Schedule Page](https://github.com/ouihq/betterKabu/main/screenshots/schedule.png)
+![Schedule Page](https://github.com/ouihq/betterKabu/blob/main/screenshots/schedule.png)
