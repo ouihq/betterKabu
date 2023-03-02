@@ -53,10 +53,10 @@ timeTable = [
     },
 ];
 
-// Define Paramters of extension
+// Define Parameters of extension
 const refreshTimeout = 10000;
 const hourOver = "grey";
-const hourNow = "green";
+const hourNow = "#7CBB00";
 
 // function which loops infinitly
 function startInfiniteLoop() {
@@ -69,15 +69,15 @@ function startInfiniteLoop() {
 // Init if Webpage has loaded
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
-        console.log("[Darkikabu active]");
+        console.log("BetterKabu running");
         const urlpath = window.location.pathname;
         // Only add colored hours if urlpath matches specific requirements
         if (urlpath.includes("SchulaufgabenPlan")) {
             markCurrentDay();
         }
         if (urlpath.includes("Stundenplan") || urlpath.includes("Main")) {
-            
             setTimeout(() => {
+                hidePassedDays();
                 timeTable.forEach(checkTime);
                 startInfiniteLoop();
             }, 600); // Still add a 600ms delay since website still rendering
@@ -115,9 +115,23 @@ function checkTime(item, index) {
         currentBox.children[2].style.fill = hourOver;
         currentBox.children[3].style.fill = hourOver;
     } else if ((currentTime > startTime) && (currentTime < endTime)) {
-        currentBox.children[1].style.fill = hourNow;
-        currentBox.children[2].style.fill = hourNow;
-        currentBox.children[3].style.fill = hourNow;
+        currentBox.children[0].classList.add('weekdayToday');
+
+    }
+}
+
+function hidePassedDays() {
+    let box;
+
+    if (window.location.pathname.includes("Stundenplan")) {
+        box = document.getElementById('umgebung');
+        for (let i = 1; i < 5; i++) {
+            if (box.children[i].children[0].children[0].classList.contains('weekdayToday')) {
+                break
+            } else {
+                box.children[i].children[0].children[1].classList.add('passedDay');
+            }
+        }
     }
 }
 
@@ -132,8 +146,9 @@ function markCurrentDay() {
         var strongs = tables[i].getElementsByTagName("strong");
         for (var j = 0, len = strongs.length; j < len; j++) {
             var strong = strongs[j];
+            console.log(strong);
             if (strong.textContent.includes(date)) {
-                strong.closest("tr").style.backgroundColor = "#876996";
+                strong.closest("tr").style.backgroundColor = "#4281ff";
                 return;
             }
         }

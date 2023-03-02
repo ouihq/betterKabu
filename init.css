@@ -1,19 +1,24 @@
 
 :root {
-    --dark1: #131313 !important;
-    --brighter: #232323 !important; 
-    --hourOverlay: #1f3058 !important;
+    --navColor: #1f2124 !important;
+    --backgroundColor: #292b30 !important;
+    --planColor: #37393f !important;
+    --lessonColor: #434549;
+    --hourOverlay: #67696d !important;
+    --hourCanceled: #FF4041 !important;
+    --hourChanged: #fab433 !important;
+    --weekdayToday: #4281ff !important;
     --white: rgb(221, 221, 221) !important;
 }
 
 
 body {
-    background-color: rgb(8, 8, 8) !important;
-	padding-top: 0px !important;
+    background-color: var(--backgroundColor) !important;
+    padding-top: 0px !important;
 }
 
 .center-block span {
-    background-color: var(--brighter) !important;
+    background-color: var(--planColor) !important;
 }
 
 table tbody tr td span {
@@ -23,14 +28,13 @@ table tbody tr td span {
 
 .navbar-inverse {
     background-image: none !important;
-    background-color: var(--hourOverlay) !important;
+    background-color: var(--navColor) !important;
 }
 
  a:focus, a:hover, a:active {
     background-color: rgb(2, 38, 75) !important;
     transition-duration: 0.2s !important;
 }
-
 
 .center-block .glyphicon {
     background-color: transparent !important;
@@ -41,36 +45,43 @@ table tbody tr td span {
 }
 
 .feiertag {
-    background-color: #213d2d !important;
+    background-color: #434549 !important;
 }
 
 .keinunterr {
-    background-color: #213d2d !important;
+    background-color: #434549 !important;
 }
-
-
 
 .form-control {
     color: var(--white) !important;
-    background-color: var(--brighter) !important ;
-    border: solid 2px var(--brighter) !important;
+    background-color: var(--planColor) !important ;
+    border: solid 2px var(--planColor) !important;
 }
 
-.std, .reg {
-    fill: var(--dark1) !important;
+.std {
+    fill: var(--lessonColor) !important;
 }
 
-td {
+.reg {
+    fill: var(--lessonColor) !important;
+}
+
+
+td, th, i, p {
     color: var(--white) !important;
 }
 
 svg {
-    background-color: var(--brighter) !important;
+    background-color: var(--planColor) !important;
     border-radius: 2.5px !important;
 }
 
+h2, h3, h4 {
+    color: var(--white) !important;
+}
+
 hr {
-    border-color: var(--brighter) !important;
+    border-color: var(--planColor) !important;
 }
 
 .regStd {
@@ -78,7 +89,7 @@ hr {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: var(--brighter) !important;
+    background-color: var(--planColor) !important;
 }
 
 .table > thead > tr > th, 
@@ -91,26 +102,42 @@ hr {
 }
 
 rect.vertretStd {
-    fill: rgb(134, 93, 134) !important;
+    fill: var(--hourChanged) !important;
+}
+
+.weekdayToday {
+    fill: var(--weekdayToday) !important;
+}
+
+.passedDay{
+    fill: gray !important;
+}
+
+rect.entfStd  {
+    fill: var(--hourCanceled) !important;
 }
 
 .inhalt {
     fill: var(--white) !important;
 }
 
-rect.entfStd  {
-    fill: rgb(114, 17, 17) !important;
+.btn-primary {
+    background-color: var(--lessonColor) !important;
+    background-image: var(--lessonColor) !important;
+    border-bottom: var(--lessonColor) !important;
+    border-color: var(--lessonColor) !important;
 }
 
 .btn-default {
     background-image: none !important;
-    background-color: var(--dark1) !important;
-    border: 1px solid var(--brighter) !important;
+    background-color: var(--lessonColor) !important;
+    color: var(--white) !important;
+    border: 1px solid var(--planColor) !important;
 }
 
 .glyphicon-forward:before,
 .glyphicon-backward:before {
-    color: #317eac !important;
+    color: var(--white) !important;
 }
 
 div.form-group label {
@@ -120,13 +147,24 @@ div.form-group label {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #02264b !important;
+    background-color: var(--backgroundColor) !important;
+    border-color: var(--backgroundColor) !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: var(--backgroundColor) !important;
+    border-color: var(--backgroundColor) !important;
+}
+
+.navbar-inverse {
+    border-color: var(--backgroundColor) !important;
+    border-bottom: var(--backgroundColor) !important;
 }
 
 a.navbar-brand:hover,
 a.navbar-brand:active,
 a.navbar-brand:focus {
-    background-color: #1f3058 !important;
+    background-color: transparent !important;
 }
 
 div.center-block span {
