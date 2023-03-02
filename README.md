@@ -1,5 +1,5 @@
-BetterKabu Browser Extension
-A Simple Browser extension that makes Digikabu.de better. It adds a Dark theme and hour/day highlighting. Orginal Code base from [@davbauer](https://github.com/davbauer/darkikabu-extension)
+# BetterKabu Browser Extension
+A Simple Browser extension that makes Digikabu.de better. Orginal Code base from [@davbauer](https://github.com/davbauer/darkikabu-extension)
 
 Key Features
 -------------
