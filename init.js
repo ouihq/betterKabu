@@ -111,6 +111,7 @@ function checkTime(item, index) {
     const currentBox = box.children[index];
 
     if (currentTime > endTime) {
+        currentBox.children[0].classList.remove('weekdayToday');
         currentBox.children[1].style.fill = hourOver;
         currentBox.children[2].style.fill = hourOver;
         currentBox.children[3].style.fill = hourOver;
@@ -146,7 +147,6 @@ function markCurrentDay() {
         var strongs = tables[i].getElementsByTagName("strong");
         for (var j = 0, len = strongs.length; j < len; j++) {
             var strong = strongs[j];
-            console.log(strong);
             if (strong.textContent.includes(date)) {
                 strong.closest("tr").style.backgroundColor = "#4281ff";
                 return;

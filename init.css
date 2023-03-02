@@ -1,14 +1,14 @@
 
 :root {
-    --navColor: #1f2124 !important;
-    --backgroundColor: #292b30 !important;
-    --planColor: #37393f !important;
+    --navColor: #1f2124;
+    --backgroundColor: #292b30;
+    --planColor: #37393f;
     --lessonColor: #434549;
-    --hourOverlay: #67696d !important;
-    --hourCanceled: #FF4041 !important;
-    --hourChanged: #fab433 !important;
-    --weekdayToday: #4281ff !important;
-    --white: rgb(221, 221, 221) !important;
+    --hourOverlay: #67696d;
+    --hourCanceled: #FF4041;
+    --hourChanged: #fab433;
+    --weekdayToday: #4281ff;
+    --white: rgb(221, 221, 221);
 }
 
 
@@ -44,13 +44,10 @@ table tbody tr td span {
     background-color: transparent !important;
 }
 
-.feiertag {
-    background-color: #434549 !important;
+.feiertag .feiertag {
+    background-color: var(--lessonColor) !important;
 }
 
-.keinunterr {
-    background-color: #434549 !important;
-}
 
 .form-control {
     color: var(--white) !important;
@@ -186,5 +183,5 @@ div.container.body-content table tbody tr td {
 }
 
 svg g text{
-    transition-duration: 0.4s !important;
+    transition-duration: 0.6s !important;
 }
