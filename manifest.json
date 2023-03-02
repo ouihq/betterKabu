@@ -1,7 +1,7 @@
 {
     "name": "BetterKabu",
     "description": "Changes the Digikabu.de website, adds dark theme and time markers for current hour and day.",
-    "version": "1.0",
+    "version": "1.1",
     "manifest_version": 3,
     "permissions": [
         "activeTab"
