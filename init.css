@@ -3,7 +3,7 @@
     --navColor: #1f2124;
     --backgroundColor: #292b30;
     --planColor: #37393f;
-    --lessonColor: #434549;
+    --lessonColor: #434549 !important;
     --hourOverlay: #67696d;
     --hourCanceled: #FF4041;
     --hourChanged: #fab433;
@@ -44,10 +44,13 @@ table tbody tr td span {
     background-color: transparent !important;
 }
 
-.feiertag .feiertag {
+.feiertag {
     background-color: var(--lessonColor) !important;
 }
 
+.keinunterr {
+    background-color: var(--lessonColor) !important;
+}
 
 .form-control {
     color: var(--white) !important;
