@@ -78,6 +78,7 @@ document.onreadystatechange = () => {
         if (urlpath.includes("Stundenplan") || urlpath.includes("Main")) {
             setTimeout(() => {
                 hidePassedDays();
+                showTimer();
                 timeTable.forEach(checkTime);
                 startInfiniteLoop();
             }, 600); // Still add a 600ms delay since website still rendering
@@ -120,6 +121,57 @@ function checkTime(item, index) {
 
     }
 }
+
+function showTimer() {
+  if (window.location.pathname.includes("Stundenplan")) {
+    const box = document.getElementById("stdplanheading");
+
+    const html = `
+      <div id="timer" style="display: flex">
+        <h3>Stunden Timer</h3>
+        <span class="timerText">0m 0s</span>
+      </div>
+    `;
+
+    box.outerHTML += html;
+
+    // Helper function to update the timer display
+    function updateTimerDisplay(minutes, seconds) {
+      const timerText = `${minutes}m ${seconds}s`;
+      document.querySelector("#timer .timerText").textContent = timerText;
+    }
+
+    // Helper function to calculate time difference
+    function calculateTimeDiff() {
+      const currentTime = new Date();
+
+      // Find the next lesson start time
+      let nextLessonStart;
+      for (let i = 0; i < timeTable.length; i++) {
+        const startTime = getTimeObject(timeTable[i].start[0], timeTable[i].start[1]);
+        if (currentTime < startTime) {
+          nextLessonStart = startTime;
+          break;
+        }
+      }
+
+      // Calculate the time difference
+      const timeDiff = Math.max(nextLessonStart - currentTime, 0);
+      const minutes = Math.floor(timeDiff / 60000);
+      const seconds = Math.floor((timeDiff % 60000) / 1000);
+
+      updateTimerDisplay(minutes, seconds);
+    }
+
+    // Initial update of the timer
+    calculateTimeDiff();
+
+    // Update the timer every second (1000ms)
+    setInterval(calculateTimeDiff, 1000);
+  }
+}
+
+
 
 function hidePassedDays() {
     let box;

@@ -1,4 +1,4 @@
-const letters = "AaBbCsDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+const letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 let interval = null;
 
 // Add an event listener to the "mouseover" event of the "h1" element
