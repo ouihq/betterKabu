@@ -11,7 +11,6 @@
     --white: rgb(221, 221, 221);
 }
 
-
 body {
     background-color: var(--backgroundColor) !important;
     padding-top: 0px !important;

@@ -1,11 +1,8 @@
 {
     "name": "BetterKabu",
-    "description": "BetterKabu eine Erweiterung die, der Website Digikabu.de einen Dark Mode gibt, den aktuellen Tag und Stunde im Stundenplan hervorhebt und die verbleibende Zeit der Unterrichtsstunde anzeigt.",
-    "version": "1.5",
+    "description": "BetterKabu: Dark Mode, Tages-/Stunden-Hervorhebung & Stunden-Timer für Digikabu.de",
+    "version": "1.6",
     "manifest_version": 3,
-    "permissions": [
-        "activeTab"
-    ],
     "icons": {
         "16": "/icons/icon16.png",
         "32": "/icons/icon32.png",

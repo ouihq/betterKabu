@@ -1,5 +1,4 @@
 
-
 // Redirect to week schedule instead of appointments
 if ((document.referrer == "https://www.digikabu.de") || (document.referrer == "https://www.digikabu.de/Main/TestRedirect")) {
     window.location.href = "https://www.digikabu.de/Stundenplan/Klasse";
@@ -124,6 +123,7 @@ function checkTime(item, index) {
 
 function showTimer() {
   if (window.location.pathname.includes("Stundenplan")) {
+
     const box = document.getElementById("stdplanheading");
 
     const html = `

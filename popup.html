@@ -3,7 +3,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="popup.js"></script>
         <style>
             body {
                 width: 400px;
@@ -21,27 +20,13 @@
             h3 {
                 margin: unset;
                 font-family: 'Futura', monospace;
-                font-size: clamp(3rem, 10vw, 10rem);
+                font-size: 24px;
                 color: white;
                 border-radius: clamp(0.4rem, 0.75vw, 1rem);
             }
 
-            /* -- YouTube Link Styles -- */
-
             body.menu-toggled > .meta-link > span {
                 color: rgb(30, 30, 30);
-            }
-
-            #source-link {
-                bottom: 60px;
-            }
-
-            #source-link > i {
-                color: rgb(94, 106, 210);
-            }
-
-            #yt-link > i {
-                color: rgb(239, 83, 80);
             }
 
             .meta-link {
@@ -77,16 +62,20 @@
     </head>
     <body>
         <h3 data-value="BetterKabu">BetterKabu</h3>
-        <p>Changes Digikabu.de to BetterKabu</p>
-        <br>
+        <p>Verwandelt Digikabu in BetterKabu.</p>
+        <p>Stundentimer anzeigen</p>
         <div>
             <a id="github" class="meta-link" href="https://github.com/ouihq" target="_blank">
                 <i class=""></i>
-                <span>Github</span>
+                <span>Source</span>
             </a>
             <a id="personal" class="meta-link" href="https://ouihq.me" target="_blank">
                 <i class=""></i>
                 <span>Website</span>
+            </a>
+            <a id="donate" class="meta-link" href="https://www.buymeacoffee.com/ouihq" target="_blank">
+                <i class=""></i>
+                <span>Donate</span>
             </a>
         </div>
     </body>
