@@ -1,41 +1,26 @@
-# Privacy Policy for Darkikabu Chrome Extension
+# Privacy Policy for BetterKabu Chrome Extension
 
-**Effective Date** [28.09.2023]
+**Effective Date** [23.10.2023]
 
-This Privacy Policy ("Policy") outlines the privacy practices for the Darkikabu Chrome Extension (the "Extension") developed by [ouihq]. The Extension is designed to modify the appearance of the website with the domain digikabu.de. I am committed to protect your privacy, and this Policy explains how I collect, use, and safeguard your information.
+This Privacy Policy ("Policy") outlines the privacy practices for the BetterKabu Chrome Extension (the "Extension") developed by [ouihq]. The Extension is designed to modify the appearance of the website with the domain digikabu.de. I am committed to protect your privacy, and this Policy explains how I collect, use, and safeguard your information.
 
 ## 1. Information We Do Not Collect
 
-I want to emphasize that the Darkikabu Chrome Extension **does not collect or store any personal data or information**. I do not gather any information about you, your browsing habits, or your interactions with digikabu.de while using the Extension.
-
-Specifically, the Extension does not:
-
-- Collect your name, email address, or any contact information.
-- Access your browsing history or other website data.
-- Track your IP address or geolocation.
-- Record any personally identifiable information.
+I want to emphasize that the BetterKabu Chrome Extension **does not collect or store any personal data or information**. I do not gather any information about you, your browsing habits, or your interactions with digikabu.de while using the Extension.
 
 ## 2. Data Modification
 
-The sole purpose of the Darkikabu Chrome Extension is to modify the appearance of the website with the domain digikabu.de. It does not alter or affect the core functionality of the website in any other way.
+The sole purpose of the BetterKabu Chrome Extension is to modify the appearance of the website with the domain digikabu.de. It does not alter or affect the core functionality of the website in any other way.
 
 ## 3. Consent
 
-By installing and using the Darkikabu Chrome Extension, you acknowledge and agree to the practices described in this Privacy Policy. You also consent to the modification of the appearance of digikabu.de by the Extension.
+By installing and using the BetterKabu Chrome Extension, you acknowledge and agree to the practices described in this Privacy Policy. You also consent to the modification of the appearance of digikabu.de by the Extension.
 
 ## 4. Updates and Changes
 
 I may update this Privacy Policy to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this Policy periodically. When we update this Policy, we will revise the "Effective Date" at the beginning of the document. Your continued use of the Extension after any changes to this Policy constitutes your acceptance of those changes.
 
-## 5. Contact Us
-
-If you have any questions or concerns about this Privacy Policy or the Darkikabu Chrome Extension, please contact me at:
-
-[Your Contact Information]
-[Your Email Address]
-[Your Mailing Address]
-
 I am committed to addressing any concerns you may have and to ensuring that your privacy is respected when using our Extension.
 
-Thank you for using the Darkikabu Chrome Extension. Your trust and privacy are important to me.
+Thank you for using the BetterKabu Chrome Extension. Your trust and privacy are important to me.
 
