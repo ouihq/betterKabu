@@ -1,5 +1,4 @@
 
-// Redirect to week schedule instead of appointments
 if ((document.referrer == "https://www.digikabu.de") || (document.referrer == "https://www.digikabu.de/Main/TestRedirect")) {
     window.location.href = "https://www.digikabu.de/Stundenplan/Klasse";
 }
@@ -8,7 +7,6 @@ if ((document.referrer == "https://digikabu.de") || (document.referrer == "https
     window.location.href = "https://digikabu.de/Stundenplan/Klasse";
 }
 
-// Define available hours
 timeTable = [
     {
         start: [8, 30],
@@ -52,12 +50,10 @@ timeTable = [
     },
 ];
 
-// Define Parameters of extension
 const refreshTimeout = 10000;
 const hourOver = "grey";
 const hourNow = "#7CBB00";
 
-// function which loops infinitly
 function startInfiniteLoop() {
     setTimeout(function() {
         timeTable.forEach(checkTime);
@@ -65,12 +61,10 @@ function startInfiniteLoop() {
     }, refreshTimeout)
 }
   
-// Init if Webpage has loaded
 document.onreadystatechange = () => {
     if (document.readyState === "complete") {
         console.log("BetterKabu running");
         const urlpath = window.location.pathname;
-        // Only add colored hours if urlpath matches specific requirements
         if (urlpath.includes("SchulaufgabenPlan")) {
             markCurrentDay();
         }
@@ -80,12 +74,11 @@ document.onreadystatechange = () => {
                 showTimer();
                 timeTable.forEach(checkTime);
                 startInfiniteLoop();
-            }, 600); // Still add a 600ms delay since website still rendering
+            }, 600);
         }
     }
 }
 
-// function to convert time from time_table to date objects
 function getTimeObject(hours, minutes) {
     let obj = new Date();
     obj.setHours(hours);
@@ -94,7 +87,6 @@ function getTimeObject(hours, minutes) {
     return obj
 }
 
-// function to check if specific time window is met
 function checkTime(item, index) {
     currentTime = new Date();
     const startTime = getTimeObject(item.start[0], item.start[1]);
@@ -135,17 +127,14 @@ function showTimer() {
 
     box.outerHTML += html;
 
-    // Helper function to update the timer display
     function updateTimerDisplay(minutes, seconds) {
       const timerText = `${minutes}m ${seconds}s`;
       document.querySelector("#timer .timerText").textContent = timerText;
     }
 
-    // Helper function to calculate time difference
     function calculateTimeDiff() {
       const currentTime = new Date();
 
-      // Find the next lesson start time
       let nextLessonStart;
       for (let i = 0; i < timeTable.length; i++) {
         const startTime = getTimeObject(timeTable[i].start[0], timeTable[i].start[1]);
@@ -155,7 +144,6 @@ function showTimer() {
         }
       }
 
-      // Calculate the time difference
       const timeDiff = Math.max(nextLessonStart - currentTime, 0);
       const minutes = Math.floor(timeDiff / 60000);
       const seconds = Math.floor((timeDiff % 60000) / 1000);
@@ -163,10 +151,8 @@ function showTimer() {
       updateTimerDisplay(minutes, seconds);
     }
 
-    // Initial update of the timer
     calculateTimeDiff();
 
-    // Update the timer every second (1000ms)
     setInterval(calculateTimeDiff, 1000);
   }
 }
