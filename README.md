@@ -17,6 +17,11 @@ Installing
 6. Click "Select folder" to load the extension into your browser.
 7. Finally, check that the extension is installed and working correctly by looking for its icon in your browser's toolbar or by testing its functionality.
 
+Alternative Extension
+----------
+Github: https://github.com/davbauer/darkikabu-extension
+Chrome Webstore: https://chromewebstore.google.com/detail/darkikabu/dlfmmhiopedplookhebmjmebfioeofdf
+
 Visual Example
 ----------
 ![Schedule Page](https://github.com/ouihq/betterKabu/blob/main/screenshots/schedule.png)
