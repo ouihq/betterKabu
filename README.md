@@ -20,6 +20,7 @@ Installing
 Alternative Extension
 ----------
 Github: https://github.com/davbauer/darkikabu-extension
+
 Chrome Webstore: https://chromewebstore.google.com/detail/darkikabu/dlfmmhiopedplookhebmjmebfioeofdf
 
 Visual Example
