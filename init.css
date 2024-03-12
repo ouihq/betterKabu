@@ -167,11 +167,11 @@ div.form-group label {
 
 #timer > *
 {
-        margin: 10px 10px 15px 0px !important;
+        margin: 10px 20px 15px 0px !important;
 }
 
-.timerText {
-    width: 90px;
+#timerText {
+    width: 80px;
     height: 37px;
     background-color: #434549;
     border-radius: 4px;
@@ -179,7 +179,7 @@ div.form-group label {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--white);
 }
 
