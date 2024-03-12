@@ -165,11 +165,6 @@ div.form-group label {
         margin: 10px 10px 15px 0px !important;
 }
 
-#timer > *
-{
-        margin: 10px 20px 15px 0px !important;
-}
-
 #timerText {
     width: 80px;
     height: 37px;
