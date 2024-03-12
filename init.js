@@ -118,18 +118,15 @@ function showTimer() {
 
     const box = document.getElementById("stdplanheading");
 
-    const html = `
-      <div id="timer" style="display: flex">
-        <h3>Stunden Timer</h3>
-        <span class="timerText">0m 0s</span>
-      </div>
-    `;
+    const timerText = document.createElement("span");
+    timerText.id = "timerText";
 
-    box.outerHTML += html;
+
+    box.append(timerText);
 
     function updateTimerDisplay(minutes, seconds) {
       const timerText = `${minutes}m ${seconds}s`;
-      document.querySelector("#timer .timerText").textContent = timerText;
+      document.querySelector("#timerText").textContent = timerText;
     }
 
     function calculateTimeDiff() {
